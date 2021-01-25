@@ -8,7 +8,8 @@
       "trifenix-connect-search",
       "trifenix-connect",
       "trifenix-connect-table-container",
-      "trifenix-connect-model"
+      "trifenix-connect-model",
+      "front-end"
       
     ],
     "scripts": {
