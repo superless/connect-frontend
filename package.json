@@ -1,0 +1,19 @@
+{
+    "name": "fnx",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+      "trifenix-connect-search",
+      "trifenix-connect",
+      "trifenix-connect-table-container",
+      "trifenix-connect-model"
+      
+    ],
+    "scripts": {
+      "start": "yarn --cwd backend start",
+      "build": "yarn --cwd frontend build"
+    }
+  }
+  
