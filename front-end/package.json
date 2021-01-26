@@ -15,7 +15,8 @@
     "react-scripts": "4.0.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4",
-    "@trifenix/trifenix-connect-search":"file:../trifenix-connect-search"
+    "@trifenix/trifenix-connect-search":"file:../trifenix-connect-search",
+    "@trifenix/trifenix-connect-table-container":"file:../trifenix-connect-table-container"
   },
   "scripts": {
     "start": "react-scripts start",

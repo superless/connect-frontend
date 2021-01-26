@@ -1,6 +1,5 @@
-import { IResponse } from "@trifenix/trifenix-connect-model";
+import { SearchClient } from "@azure/search-documents";
 export declare class BaseConnectSearch<T> {
-    private client;
+    protected client: SearchClient<T>;
     constructor(endPoint: string, indexName: string, key: string);
-    protected searchEntities(query: string): Promise<IResponse<T[]>>;
 }

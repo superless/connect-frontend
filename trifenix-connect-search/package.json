@@ -1,5 +1,5 @@
 {
-  "name": "@trifenix/trifenix-connect-model",
+  "name": "@trifenix/trifenix-connect-search",
   "version": "0.0.8",
   "description": "modelo de trifenix connect",
   "main": "dist/index.cjs.js",
@@ -14,8 +14,7 @@
     "rollup": "^2.38.0",    
     "rollup-plugin-typescript2": "^0.29.0",
     "@azure/search-documents": "^11.0.3",
-    "@trifenix/mdm": "^1.6.18",
-    "@trifenix/trifenix-connect-model": "file:../trifenix-connect-model"
+    "@trifenix/mdm": "^1.6.18"
   },
   "scripts": {
     "build": "rollup -c",

@@ -1,7 +1,7 @@
 {
-  "name": "@trifenix/trifenix-connect-model",
+  "name": "@trifenix/trifenix-connect-table-container",
   "version": "0.0.8",
-  "description": "modelo de trifenix connect",
+  "description": "contenedor de la tabla de trifenix connect",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "rollup": "^2.38.0",    
-    "rollup-plugin-typescript2": "^0.29.0"
+    "rollup-plugin-typescript2": "^0.29.0",
+    "@azure/search-documents": "^11.0.3",
+    "@trifenix/mdm": "^1.6.18",
+    "@trifenix/trifenix-connect-search":"file:../trifenix-connect-search"
   },
   "scripts": {
     "build": "rollup -c",

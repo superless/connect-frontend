@@ -1718,18 +1718,20 @@
   resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.18.tgz#3eca8d8de183a084110eff03e16bbe747062cdc3"
   integrity sha512-AGsVOSU1tjmVEoDGyHyMloh7wLDp0Ix1RMVbcVqmujTdaNhX2brmzpfDUBUQiDxiRZfRYrODY4ePgZNtoOsymw==
 
-"@trifenix/trifenix-connect-model@file:../trifenix-connect-model":
-  version "0.0.8"
-  dependencies:
-    rollup "^2.38.0"
-    rollup-plugin-typescript2 "^0.29.0"
-
 "@trifenix/trifenix-connect-search@file:../trifenix-connect-search":
   version "0.0.8"
   dependencies:
     "@azure/search-documents" "^11.0.3"
     "@trifenix/mdm" "^1.6.18"
-    "@trifenix/trifenix-connect-model" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-search-0.0.8-f8787c99-d014-4ff1-af55-a2f68a4d2112-1611624113129/node_modules/@trifenix/trifenix-connect-model"
+    rollup "^2.38.0"
+    rollup-plugin-typescript2 "^0.29.0"
+
+"@trifenix/trifenix-connect-table-container@file:../trifenix-connect-table-container":
+  version "0.0.8"
+  dependencies:
+    "@azure/search-documents" "^11.0.3"
+    "@trifenix/mdm" "^1.6.18"
+    "@trifenix/trifenix-connect-search" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-table-container-0.0.8-aa24aa96-fb6a-491e-8b78-0ecb7ec49419-1611637093656/node_modules/@trifenix/trifenix-connect-search"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
 

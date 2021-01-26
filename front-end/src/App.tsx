@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {ConnectSearch} from "@trifenix/trifenix-connect-search";
+import { TableQuery } from "@trifenix/trifenix-connect-table-container";
 
 function App() {
 
@@ -8,7 +9,15 @@ function App() {
   "entities-agro",
   "7902C1E82BEEDC85AC0E535CF45DFC77");
   
-  connect.getEntities(1).then((response) => console.log(response));
+  var query = TableQuery({
+    page : 1,
+    elementsInPage : 10,
+    pathname : "barracks",
+    entity : 1,
+    propIndexName : {1:6}
+
+  });
+  connect.getEntities(query).then((response) => console.log(response));;
 
   
   return (

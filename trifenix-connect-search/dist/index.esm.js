@@ -91,7 +91,22 @@ var BaseConnectSearch = /** @class */ (function () {
     function BaseConnectSearch(endPoint, indexName, key) {
         this.client = new SearchClient(endPoint, indexName, new AzureKeyCredential(key));
     }
-    BaseConnectSearch.prototype.searchEntities = function (query) {
+    return BaseConnectSearch;
+}());
+
+var ConnectSearch = /** @class */ (function (_super) {
+    __extends(ConnectSearch, _super);
+    function ConnectSearch(endpoint, index_name, key) {
+        if (endpoint === void 0) { endpoint = "https://search-agro.search.windows.net/"; }
+        if (index_name === void 0) { index_name = "entities-agro"; }
+        if (key === void 0) { key = "7902C1E82BEEDC85AC0E535CF45DFC77"; }
+        var _this = _super.call(this, endpoint, index_name, key) || this;
+        _this.endpoint = endpoint;
+        _this.index_name = index_name;
+        _this.key = key;
+        return _this;
+    }
+    ConnectSearch.prototype.getEntities = function (query) {
         var e_1, _a;
         return __awaiter(this, void 0, void 0, function () {
             var results, searchResults, _b, _c, result, e_1_1, error_1;
@@ -99,12 +114,14 @@ var BaseConnectSearch = /** @class */ (function () {
                 switch (_d.label) {
                     case 0:
                         results = [];
-                        console.log("" + query);
                         _d.label = 1;
                     case 1:
                         _d.trys.push([1, 15, , 16]);
                         return [4 /*yield*/, this.client.search("*", {
-                                filter: query,
+                                filter: query.filter,
+                                facets: query.facets,
+                                select: query.select,
+                                skip: query.skip
                             })];
                     case 2:
                         searchResults = _d.sent();
@@ -148,34 +165,6 @@ var BaseConnectSearch = /** @class */ (function () {
                                 error: error_1.message,
                             }];
                     case 16: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    return BaseConnectSearch;
-}());
-
-var ConnectSearch = /** @class */ (function (_super) {
-    __extends(ConnectSearch, _super);
-    function ConnectSearch(endpoint, index_name, key) {
-        if (endpoint === void 0) { endpoint = "https://search-agro.search.windows.net/"; }
-        if (index_name === void 0) { index_name = "entities-agro"; }
-        if (key === void 0) { key = "7902C1E82BEEDC85AC0E535CF45DFC77"; }
-        var _this = _super.call(this, endpoint, index_name, key) || this;
-        _this.endpoint = endpoint;
-        _this.index_name = index_name;
-        _this.key = key;
-        return _this;
-    }
-    ConnectSearch.prototype.getEntities = function (index) {
-        return __awaiter(this, void 0, void 0, function () {
-            var res;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.searchEntities("index eq " + index)];
-                    case 1:
-                        res = _a.sent();
-                        return [2 /*return*/, res];
                 }
             });
         });
