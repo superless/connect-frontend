@@ -1,13 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import {ConnectSearch} from "@trifenix/trifenix-connect-search";
 
 function App() {
+
+  var connect = new ConnectSearch("https://search-agro.search.windows.net/",
+  "entities-agro",
+  "7902C1E82BEEDC85AC0E535CF45DFC77");
+  
+  connect.getEntities(1).then((response) => console.log(response));
+
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
