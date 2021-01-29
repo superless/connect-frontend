@@ -14,7 +14,8 @@
     "rollup": "^2.38.0",    
     "rollup-plugin-typescript2": "^0.29.0",
     "@azure/search-documents": "^11.0.3",
-    "@trifenix/mdm": "^1.6.18"
+    "@trifenix/trifenix-connect": "file:../trifenix-connect",
+    "@trifenix/mdm": "^1.6.24"
   },
   "scripts": {
     "build": "rollup -c",

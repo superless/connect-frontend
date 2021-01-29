@@ -1,0 +1,1 @@
+export {ICommonTableProperties} from "./ICommonTableProperties";

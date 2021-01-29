@@ -1,3 +1,3 @@
-export {IBaseInput} from './IBaseInput';
+export * from './';
 
 

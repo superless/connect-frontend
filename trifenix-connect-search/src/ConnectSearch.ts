@@ -4,6 +4,10 @@ import {IndexesModel, IResponse, ISearchQuery} from "./model"
 import { BaseConnectSearch } from "./base/BaseConnectSearch";
 
 
+/**
+ * Programa principal de conexión a trifenix a azure search 
+ * con el modelo trifenix connect
+ */
 export class ConnectSearch extends BaseConnectSearch<EntityBaseSearch<GeographyPoint>>
     implements IndexesModel<EntityBaseSearch<GeographyPoint>> {
     public endpoint: string;
@@ -11,9 +15,9 @@ export class ConnectSearch extends BaseConnectSearch<EntityBaseSearch<GeographyP
     public key: string;
 
     constructor(
-        endpoint = "https://search-agro.search.windows.net/",
-        index_name = "entities-agro",
-        key = "7902C1E82BEEDC85AC0E535CF45DFC77"
+        endpoint : string,
+        index_name : string,
+        key : string
     ) {
         super(endpoint, index_name, key);
         this.endpoint = endpoint;

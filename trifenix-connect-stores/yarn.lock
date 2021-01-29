@@ -12,9 +12,16 @@
     picomatch "^2.2.2"
 
 "@trifenix/mdm@^1.6.23":
-  version "1.6.24"
-  resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.24.tgz#f3e4a420de1da3a005356269a6b5a229d7b5d36d"
-  integrity sha512-ner2LnGHq8MIMG45slHvCRv9fKi3FctGlrzyQh6XoA43te7DCkvvP71+WQrtKX1SAQKTn2Bggqgr6PgX2TYYBA==
+  version "1.6.23"
+  resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.23.tgz#9e7da04f7865c2cbeb030571a4ac48489ea3c611"
+  integrity sha512-LPY54RPGJlvGm4a6wyIzkvTzK6Y9Mw7MfZmuDiDPMZhITl/BiJhzo1b/C8QSVMEIbhXWWY6N66gahxqF+VkIFg==
+
+"@trifenix/trifenix-connect@file:../trifenix-connect":
+  version "0.0.8"
+  dependencies:
+    "@trifenix/mdm" "^1.6.23"
+    rollup "^2.38.0"
+    rollup-plugin-typescript2 "^0.29.0"
 
 "@types/estree@0.0.39":
   version "0.0.39"
@@ -93,6 +100,11 @@ make-dir@^3.0.2:
   dependencies:
     semver "^6.0.0"
 
+mobx@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.1.1.tgz#3e5c7f993f01b29a11c6f70b5cbd98d4e4d70d24"
+  integrity sha512-+HiCdWW8rQHzKEL5Yg6ncpDPBPbeLD4cWttJ9XuP9nyjZutsp8IjyIIeGKdxsEJoyd+oMs4Uea/6UTKywQIRZg==
+
 p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
@@ -153,9 +165,9 @@ rollup-plugin-typescript2@^0.29.0:
     tslib "2.0.1"
 
 rollup@^2.38.0:
-  version "2.38.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.38.1.tgz#ecea0f7ce6ef2c1f023fdb79524eb7aeb670ea79"
-  integrity sha512-q07T6vU/V1kqM8rGRRyCgEvIQcIAXoKIE5CpkYAlHhfiWM1Iuh4dIPWpIbqFngCK6lwAB2aYHiUVhIbSWHQWhw==
+  version "2.38.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.38.0.tgz#57942d5a10826cb12ed1f19c261f774efa502d2d"
+  integrity sha512-ay9zDiNitZK/LNE/EM2+v5CZ7drkB2xyDljvb1fQJCGnq43ZWRkhxN145oV8GmoW1YNi4sA/1Jdkr2LfawJoXw==
   optionalDependencies:
     fsevents "~2.1.2"
 

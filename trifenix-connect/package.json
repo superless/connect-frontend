@@ -8,12 +8,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.168",
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "rollup": "^2.38.0",    
-    "rollup-plugin-typescript2": "^0.29.0",  
-    "@trifenix/mdm": "^1.6.23"
+    "@trifenix/mdm": "^1.6.23",
+    "lodash": "^4.17.20",
+    "rollup": "^2.38.0",
+    "rollup-plugin-typescript2": "^0.29.0"
   },
   "scripts": {
     "build": "rollup -c",
