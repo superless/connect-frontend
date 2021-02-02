@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./dist",
-    "strict": true,
+    "declarationDir": "./dist",    
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noUnusedParameters": true,
@@ -10,9 +9,12 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./dist",
-    "target": "es5",
+    "target": "es2019",
+    "lib": ["es2019"],
     "resolveJsonModule":true,
-    "esModuleInterop":true
+    "esModuleInterop":true,
+    "strict": true,
+    "noImplicitReturns": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

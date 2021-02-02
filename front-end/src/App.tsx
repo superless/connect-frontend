@@ -8,6 +8,7 @@ function App() {
   var connect = new ConnectSearch("https://search-agro.search.windows.net/",
   "entities-agro",
   "7902C1E82BEEDC85AC0E535CF45DFC77");
+
   
   var query = TableQueryFilter({
     page : 1,

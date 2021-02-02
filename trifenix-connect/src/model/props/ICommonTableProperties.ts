@@ -54,4 +54,6 @@ export interface ICommonTableProperties<T> extends CollectionTableState<T> {
 
     // cada vez que se modifica el tableState se genera un evento.
     snapshot : (stateTable : CollectionTableState<T>) => void;
+
+    
 }
