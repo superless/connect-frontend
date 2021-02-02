@@ -3,6 +3,10 @@ import { GeographyPoint, SearchRequestOptions } from "@azure/search-documents";
 import {EntityBaseSearch } from "@trifenix/mdm"
 
 
+
+/**
+ * Usa las keys del entitySearch, para heredar y asignar las keys de ISearchBaseQuery.
+ */
 export interface ISearchQuery extends ISearchBaseQuery<keyof EntityBaseSearch<GeographyPoint>>
 {
 
