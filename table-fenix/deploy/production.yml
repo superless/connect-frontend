@@ -1,0 +1,48 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: "ubuntu-16.04"
+
+# github ejecuta este build, para validar y ejecutar,
+# es decir, dos veces
+# esta instrucción asigna que no se ejecute en el pull request (para validar).
+# sino, que solo se ejecute al modificar la rama.
+pr: none
+
+
+steps:
+
+  - task: ExtractVersionFromTag@1
+    inputs:
+      projectFolderPath: '$(Build.SourcesDirectory)'
+
+  
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "12.x"
+    displayName: "Install Node.js"
+    
+
+  - task: Npm@1
+    inputs:
+      command: 'custom'
+      customCommand: '--no-git-tag-version version 0.1.2'
+      customRegistry: 'useFeed'
+      customFeed: '$(default-feed)'
+ 
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: "$(Build.SourcesDirectory)"
+      contents: "**"
+      targetFolder: $(Build.ArtifactStagingDirectory)/npm
+    displayName: "Copy Build"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: "$(Build.ArtifactStagingDirectory)/npm"
+      artifactName: npm
+    displayName: "Publish npm artifact"

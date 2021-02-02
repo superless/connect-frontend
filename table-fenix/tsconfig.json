@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",    
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "target": "es2019",
+    "lib": ["es2019","DOM"],
+    "resolveJsonModule":true,
+    "esModuleInterop":true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "jsx": "react"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

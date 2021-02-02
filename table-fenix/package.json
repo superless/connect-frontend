@@ -1,0 +1,65 @@
+{
+  "name": "@trifenix/table-fenix",
+  "description": "Componente tabla para conexión con trifenix connect, por ahora con semantic ui.",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@trifenix/mdm": "^1.6.24",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "@trifenix/trifenix-connect":"file:../trifenix-connect",
+    "concurrently": "^5.0.0",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prepend-file": "^1.3.1",
+    "prettier": "^1.19.1",
+    "rollup": "^1.27.5",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "semantic-ui-react": "^0.88.2",
+    "ts-node": "^8.5.2",
+    "tslib": "^1.10.0",
+    "typescript": "^4.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trifenix/table-fenix/"
+  },
+  "keywords": [
+    "trifenix",
+    "connect"
+  ],
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w",
+    "prepublishOnly": "npm run build",
+    "dev": "concurrently --kill-others \"npm run build-watch\" \"npm run start-example\"",
+    "test": "ts-node test/test.ts",
+    "pretest": "npm run build",
+    "test:lint": "eslint ./src/**/*.ts ./src/**/*.tsx ./example/src/**/*.ts ./example/src/**/*.tsx",
+    "test:lint:fix": "npm run test:lint -- --fix",
+    "vsToken": "vsts-npm-auth -config .npmrc"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3"
+  }
+}
