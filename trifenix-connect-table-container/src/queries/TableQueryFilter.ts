@@ -12,13 +12,13 @@ import { ITableFilterInput } from "../model/ITableFilterInput";
  * @returns
  * ISearchQuery.  
  */
-export const TableQueryFilter : (input: ITableFilterInput)=>ISearchQuery = input=>{
+export const TableQueryFilter : (index: number, page: number, elementsInPage: number, filter: FilterModel)=>ISearchQuery = (index, page, elementsInPage, filter)=>{
   
   return {
-    skip : (input.page > 1 ? (input.page - 1) * input.elementsInPage : 0),
+    skip : (page > 1 ? (page - 1) * elementsInPage : 0),
     facets : ['rel/facet, count:1000'],
     select : [],
-    filter : `index eq ${input.entity} ${getFilter(input.filter)}`
+    filter : `index eq ${index} ${getFilter(filter)}`
   }
 }
 

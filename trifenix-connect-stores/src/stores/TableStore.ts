@@ -39,10 +39,10 @@ export class TableStore<T> implements CollectionTableState<T>{
      * Busca los entitySearch desde la base de datos de busqueda
      * 
      */
-    SetValues(){
+    async SetValues(){
         this.load = true;
-        this.operations.tableFilterSearch(this.index, this.current, this.elementsInPage, this.filter as FilterModel)
-        .then(this.SetFilterSearch);
+        var response = await this.operations.tableFilterSearch(this.index, this.current, this.elementsInPage, this.filter as FilterModel);
+        this.SetFilterSearch(response)
     }
 
     
@@ -53,6 +53,7 @@ export class TableStore<T> implements CollectionTableState<T>{
     SetFilterSearch(result : CollectionResult<T>):void{
         // propiedades de resultado.
         const {total, entities, facets} = result;
+
         // asignando los valores por página, usa current como página actual
         // y asigna los valores encontrados.
         this.itemsByPage = {...this.itemsByPage, [this.current]: entities};
@@ -82,7 +83,7 @@ export class TableStore<T> implements CollectionTableState<T>{
      * Se puede incorporar actualizar en vez de omitir cuando ya tenga valores.
      * @param facets, facets obtenidos de la consulta a la base de datos de busqueda. 
      */
-    SetNames(facets: Facet[]){
+    async SetNames(facets: Facet[]){
 
         // usa trifenix connect para retornar los ids de cada facet.
         const fcts = MdmDocuments.GetFacetDictionary(facets);
@@ -99,23 +100,23 @@ export class TableStore<T> implements CollectionTableState<T>{
             // usa relsLocal con el solo fin de verificar si existe previamente el índice
             let relsLocal = this.rels as {[key:number]: {[id:string] : string} };
 
-            // si el índice no existe, no lo irá a buscar y continuará con la iteración.
+            // si el índice ya existe, no lo irá a buscar y continuará con la iteración.
             if (Object.keys(relsLocal).some(s=>Number(s) === n)){
                 continue;
             }
             
             // usa la operación de inyección para obtener los nombres. 
-            this.operations.getEntityNames(n, propNames[n], value).then(r=>{
+            var response = await this.operations.getEntityNames(n, propNames[n], value);
 
-                this.load = false;
+            this.load = false;
 
-                // asigna el nombre de cada entidad 
-                // generando un diccionario con el id y el nombre, dentro del contenedor
-                // con el índice del facet actual (el índice del entityRelated).
-                this.rels = {...this.rels, [n]:{r}};
+            // asigna el nombre de cada entidad 
+            // generando un diccionario con el id y el nombre, dentro del contenedor
+            // con el índice del facet actual (el índice del entityRelated).
+            this.rels = {...this.rels, [n]:{response}};
 
-                this.load = true;
-            })
+            this.load = true;
+
         }
        
     }

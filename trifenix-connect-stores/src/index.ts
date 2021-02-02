@@ -1,1 +1,1 @@
-export const d = ()=>"hw";
+export * from "./stores";

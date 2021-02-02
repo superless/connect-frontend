@@ -105,12 +105,7 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@trifenix/mdm@^1.6.18":
-  version "1.6.18"
-  resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.18.tgz#3eca8d8de183a084110eff03e16bbe747062cdc3"
-  integrity sha512-AGsVOSU1tjmVEoDGyHyMloh7wLDp0Ix1RMVbcVqmujTdaNhX2brmzpfDUBUQiDxiRZfRYrODY4ePgZNtoOsymw==
-
-"@trifenix/mdm@^1.6.23":
+"@trifenix/mdm@^1.6.23", "@trifenix/mdm@^1.6.24":
   version "1.6.24"
   resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.24.tgz#f3e4a420de1da3a005356269a6b5a229d7b5d36d"
   integrity sha512-ner2LnGHq8MIMG45slHvCRv9fKi3FctGlrzyQh6XoA43te7DCkvvP71+WQrtKX1SAQKTn2Bggqgr6PgX2TYYBA==
@@ -119,7 +114,18 @@
   version "0.0.8"
   dependencies:
     "@azure/search-documents" "^11.0.3"
-    "@trifenix/mdm" "^1.6.18"
+    "@trifenix/mdm" "^1.6.24"
+    "@trifenix/trifenix-connect" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-search-0.0.8-a33506a7-860f-4696-b024-17e0e319ecca-1612230305598/node_modules/@trifenix/trifenix-connect"
+    rollup "^2.38.0"
+    rollup-plugin-typescript2 "^0.29.0"
+
+"@trifenix/trifenix-connect-stores@file:../trifenix-connect-stores":
+  version "0.0.8"
+  dependencies:
+    "@trifenix/mdm" "^1.6.23"
+    "@trifenix/trifenix-connect" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-stores-0.0.8-c0e8f48a-a6a8-4c9f-b61b-36de2f97b6b0-1612230305603/node_modules/@trifenix/trifenix-connect"
+    lodash "^4.17.20"
+    mobx "^6.1.1"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
 
@@ -127,6 +133,7 @@
   version "0.0.8"
   dependencies:
     "@trifenix/mdm" "^1.6.23"
+    lodash "^4.17.20"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
 
@@ -241,6 +248,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash@^4.17.20:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
 make-dir@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -259,6 +271,11 @@ mime-types@^2.1.12:
   integrity sha512-0TO2yJ5YHYr7M2zzT7gDU1tbwHxEUWBCLt0lscSNpcdAfFyJOVEpRYNS7EXVcTLNj/25QO8gulHC5JtTzSE2UQ==
   dependencies:
     mime-db "1.45.0"
+
+mobx@^6.1.1:
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.1.4.tgz#6ba17f4e291146a3a26605a9c3a0c3ff8aea1e0b"
+  integrity sha512-DorvGl+ssJ9i5Sef90XzcIuOBMa2kWSC+PidTLHtgBX4f1bXOd+NKtujSjaRnQMDLTRkCzfJEFcC08hEjzCVaA==
 
 node-fetch@^2.6.0:
   version "2.6.1"
