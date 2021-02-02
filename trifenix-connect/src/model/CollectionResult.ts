@@ -10,9 +10,10 @@ import { Facet } from "./Facet";
  * total, el total de registros encontrados (para paginación).
  * entities, colección de entitySearch,
  * facets, facets encontrados (si se especifica facets en la consulta).
+ * usa un diccionario en que el key es el nombre del facet solicitado.
  */
 export interface CollectionResult<T> {
     total: number;
     entities: EntityBaseSearch<T>[];
-    facets?: Facet[];
+    facets?: {[key: string]: Facet[]};
 }

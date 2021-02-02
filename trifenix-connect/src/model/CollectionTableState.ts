@@ -27,7 +27,7 @@ export interface CollectionTableState<T> {
     indexPropNames: { [key: number]: number[]; } | {};
     orderItems: OrderItem[] | [];
     itemsByPage : { [key: number] : EntityBaseSearch<T>[]} | {}
-    facets?: Facet[] | [];
+    facets?:{[key: string]: Facet[]};
     rels : {[key:number]: {[id:string] : string} } | {}
     load : boolean;
     elementsInPage : number;

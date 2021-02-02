@@ -24,7 +24,7 @@ export const TableQueryFilter : (input: ITableFilterInput)=>ISearchQuery = input
 
 /**
  * TODO: !Importante, el filtro tiene distintos tipos de comparaciones determinadas por @trifenix/mdm/FilterType, esto no está implementado.
- * 
+ * TODO: el filtro también tiene la posibilidad de filtrar más tipos de campos.
  * obtiene el filtro que incluye las relaciones
  * a elementos.
  * En el filtro se indican los identificadores de relaciones

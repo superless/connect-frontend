@@ -23,8 +23,9 @@ export interface ICommonTableProperties<T> extends CollectionTableState<T> {
    * @param {Related} typeRelated tipo de cabecera.
    * @returns {string} el nombre de la cabecera.
    */
-
     headerProperty: (header: number, typeRelated: KindProperty) => string;
+
+    
     /**
      * muestra el valor de una enumeración de acuerdo al índice de propiedad correspondiente a typeSearch de tipo enumeración dentro del entitySearch.
      * @param {number} indexEnun índice del typeSearch de tipo ENUM dentro de una entidad (EntitySearch).

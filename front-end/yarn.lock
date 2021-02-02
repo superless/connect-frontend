@@ -1705,11 +1705,17 @@
   resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.18.tgz#3eca8d8de183a084110eff03e16bbe747062cdc3"
   integrity sha512-AGsVOSU1tjmVEoDGyHyMloh7wLDp0Ix1RMVbcVqmujTdaNhX2brmzpfDUBUQiDxiRZfRYrODY4ePgZNtoOsymw==
 
+"@trifenix/mdm@^1.6.23", "@trifenix/mdm@^1.6.24":
+  version "1.6.24"
+  resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.24.tgz#f3e4a420de1da3a005356269a6b5a229d7b5d36d"
+  integrity sha512-ner2LnGHq8MIMG45slHvCRv9fKi3FctGlrzyQh6XoA43te7DCkvvP71+WQrtKX1SAQKTn2Bggqgr6PgX2TYYBA==
+
 "@trifenix/trifenix-connect-search@file:../trifenix-connect-search":
   version "0.0.8"
   dependencies:
     "@azure/search-documents" "^11.0.3"
-    "@trifenix/mdm" "^1.6.18"
+    "@trifenix/mdm" "^1.6.24"
+    "@trifenix/trifenix-connect" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-search-0.0.8-b90f1047-0384-40a3-9661-f3907cc90aa3-1612225056974/node_modules/@trifenix/trifenix-connect"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
 
@@ -1718,7 +1724,16 @@
   dependencies:
     "@azure/search-documents" "^11.0.3"
     "@trifenix/mdm" "^1.6.18"
-    "@trifenix/trifenix-connect-search" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-table-container-0.0.8-7f5c3be4-e71e-4d19-907f-aae4bfd377df-1611775007570/node_modules/@trifenix/trifenix-connect-search"
+    "@trifenix/trifenix-connect" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-table-container-0.0.8-03068428-28ab-4885-a21e-fb61d0d62e2f-1612225056988/node_modules/@trifenix/trifenix-connect"
+    "@trifenix/trifenix-connect-search" "file:../../../../home/ale/.cache/yarn/v6/npm-@trifenix-trifenix-connect-table-container-0.0.8-03068428-28ab-4885-a21e-fb61d0d62e2f-1612225056988/node_modules/@trifenix/trifenix-connect-search"
+    rollup "^2.38.0"
+    rollup-plugin-typescript2 "^0.29.0"
+
+"@trifenix/trifenix-connect@file:../trifenix-connect":
+  version "0.0.8"
+  dependencies:
+    "@trifenix/mdm" "^1.6.23"
+    lodash "^4.17.20"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
 

@@ -37,6 +37,7 @@ export class TableStore<T> implements CollectionTableState<T>{
     
     /**
      * Busca los entitySearch desde la base de datos de busqueda
+     * 
      */
     SetValues(){
         this.load = true;
