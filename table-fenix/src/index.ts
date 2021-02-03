@@ -1,6 +1,6 @@
-import TableFenix from './components/Table/entity/TableFenix';
+import {TableFenix, ITableFenixProps} from './components/Table/entity/TableFenix';
 
 
 
 
-export { TableFenix };
+export { TableFenix, ITableFenixProps };

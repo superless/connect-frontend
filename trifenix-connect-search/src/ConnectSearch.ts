@@ -4,6 +4,7 @@ import { EntityBaseSearch } from "@trifenix/mdm";
 import { IndexesModel, ISearchQuery } from "./model"
 import { BaseConnectSearch } from "./base/BaseConnectSearch";
 import { SearchHelper } from "./helper";
+import {ConnectAzure} from "./ConnectAzure";
 
 
 /**
@@ -24,15 +25,12 @@ export class ConnectSearch extends BaseConnectSearch<EntityBaseSearch<GeographyP
      * @param index_name 
      * @param key 
      */
-    constructor(
-        endpoint: string,
-        index_name: string,
-        key: string
+    constructor(connect:ConnectAzure
     ) {
-        super(endpoint, index_name, key);
-        this.endpoint = endpoint;
-        this.index_name = index_name;
-        this.key = key;
+        super(connect.endpoint, connect.index, connect.key);
+        this.endpoint = connect.endpoint;
+        this.index_name = connect.index;
+        this.key = connect.key;
     }
 
     /**

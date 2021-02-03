@@ -7,8 +7,9 @@ import { CollectionTableState } from "../CollectionTableState";
  * pueda tener como entrada un componente que mantenga una herencia de esta propiedad.
  * @template T tipogeo
  */
-export interface ICommonTableProperties<T> extends CollectionTableState<T> {
+export interface ICommonTableProperties<T,T2> extends CollectionTableState<T> {
 
+    connect:T2;
     /**
      * obtiene el nombre de la cabecera desde el índice 
      * para una entidad.

@@ -17,12 +17,12 @@ export interface ITableBaseFenixState {
 /**
  * Tabla basada en EntitySearchs.
  */
-export default class TableBaseFenix<T> extends React.Component<ITableBaseProps<T>, ITableBaseFenixState> {
+export default class TableBaseFenix<T,T2> extends React.Component<ITableBaseProps<T,T2>, ITableBaseFenixState> {
   /**
    * Tabla basada en EntitySearchs.
    * @param props propedades del componente
    */
-  constructor(props: ITableBaseProps<T>) {
+  constructor(props: ITableBaseProps<T,T2>) {
     super(props);
     
     this.setPaginationValue = this.setPaginationValue.bind(this);

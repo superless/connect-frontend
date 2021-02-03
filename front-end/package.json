@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@trifenix/table-fenix": "file:../table-fenix",
     "@trifenix/trifenix-connect": "file:../trifenix-connect",
     "@trifenix/trifenix-connect-search": "file:../trifenix-connect-search",
     "@trifenix/trifenix-connect-table-container": "file:../trifenix-connect-table-container",
@@ -16,6 +17,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },

@@ -1,10 +1,10 @@
-import { EntityBaseSearch, GeoPointTs, KindProperty } from "@trifenix/mdm";
+import { EntityBaseSearch} from "@trifenix/mdm";
 import { ICommonTableProperties } from "@trifenix/trifenix-connect";
-import { IEntityNameId } from "../base/model";
+
 /**
  * Propiedades de table fenix.
  */
-export interface ITableBaseProps<T> extends ICommonTableProperties<T> {
+export interface ITableBaseProps<T, T2> extends ICommonTableProperties<T,T2> {
   visible : boolean;
   /**
    * JSX para renderizar en las cabeceras de la tabla.

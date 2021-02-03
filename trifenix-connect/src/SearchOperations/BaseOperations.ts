@@ -20,5 +20,5 @@ export interface BaseOperations{
         index : number,
         indexPropName : number[],
         ids : string[],
-        ):Promise<{[id:string] : string}>
+        ):Promise<{[id:string] : string} | undefined>
     }

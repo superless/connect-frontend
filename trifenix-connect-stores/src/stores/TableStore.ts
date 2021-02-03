@@ -1,6 +1,6 @@
 import { FilterModel, OrderItem } from "@trifenix/mdm";
 import { CollectionResult, CollectionTableState, Facet, MdmDocuments, TableOperations } from "@trifenix/trifenix-connect";
-import { makeAutoObservable } from "mobx";
+import { computed, makeAutoObservable, observable } from "mobx";
 
 /**
  * Store de Table Fenix y operaciones con inyección de dependencias.
@@ -30,7 +30,7 @@ export class TableStore<T> implements CollectionTableState<T>{
      * @param tableOperations, operaciones en base de datos  de busqueda. 
      */
     constructor(tableOperations: TableOperations<T>) {
-        makeAutoObservable(this);
+        makeAutoObservable(this, {operations : computed});
         this.operations = tableOperations;
     }
 

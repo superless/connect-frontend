@@ -3,6 +3,7 @@ import { CollectionResult } from "@trifenix/trifenix-connect";
 import { EntityBaseSearch } from "@trifenix/mdm";
 import { IndexesModel, ISearchQuery } from "./model";
 import { BaseConnectSearch } from "./base/BaseConnectSearch";
+import { ConnectAzure } from "./ConnectAzure";
 /**
  * Programa principal de conexión a trifenix a azure search
  * con el modelo trifenix connect
@@ -17,7 +18,7 @@ export declare class ConnectSearch extends BaseConnectSearch<EntityBaseSearch<Ge
      * @param index_name
      * @param key
      */
-    constructor(endpoint: string, index_name: string, key: string);
+    constructor(connect: ConnectAzure);
     /**
      * Obtiene los entitySearch desde Azure Search
      * @param query, parámetros de la consulta.

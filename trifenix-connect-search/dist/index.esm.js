@@ -50,11 +50,11 @@ class ConnectSearch extends BaseConnectSearch {
      * @param index_name
      * @param key
      */
-    constructor(endpoint, index_name, key) {
-        super(endpoint, index_name, key);
-        this.endpoint = endpoint;
-        this.index_name = index_name;
-        this.key = key;
+    constructor(connect) {
+        super(connect.endpoint, connect.index, connect.key);
+        this.endpoint = connect.endpoint;
+        this.index_name = connect.index;
+        this.key = connect.key;
     }
     /**
      * Obtiene los entitySearch desde Azure Search

@@ -13,7 +13,7 @@ import { EntityBaseSearch } from '@trifenix/mdm';
  * se deja una herencia para ver la posibilidad de precargar 
  * las cabeceras.
  */
-export interface ITableFenixProps<T> extends ITableBaseProps<T> {
+export interface ITableFenixProps<T,T2> extends ITableBaseProps<T,T2> {
 }
 
 
@@ -23,7 +23,7 @@ export interface ITableFenixProps<T> extends ITableBaseProps<T> {
  * @param props 
  * @returns  
  */
-export default function TableFenix<T>(props: ITableFenixProps<T>) {
+export function TableFenix<T,T2>(props: ITableFenixProps<T,T2>) {
   const headers : (entities: EntityBaseSearch<T>[], header: (header: number) => string)=>IEntityNameIndex[] = GetEntityHeaders;
   return (
     <TableBaseFenix  {...props}/>

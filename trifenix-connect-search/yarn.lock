@@ -105,7 +105,7 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@trifenix/mdm@^1.6.23", "@trifenix/mdm@^1.6.24":
+"@trifenix/mdm@^1.6.24":
   version "1.6.24"
   resolved "https://registry.yarnpkg.com/@trifenix/mdm/-/mdm-1.6.24.tgz#f3e4a420de1da3a005356269a6b5a229d7b5d36d"
   integrity sha512-ner2LnGHq8MIMG45slHvCRv9fKi3FctGlrzyQh6XoA43te7DCkvvP71+WQrtKX1SAQKTn2Bggqgr6PgX2TYYBA==
@@ -113,7 +113,7 @@
 "@trifenix/trifenix-connect@file:../trifenix-connect":
   version "0.0.8"
   dependencies:
-    "@trifenix/mdm" "^1.6.23"
+    "@trifenix/mdm" "^1.6.24"
     lodash "^4.17.20"
     rollup "^2.38.0"
     rollup-plugin-typescript2 "^0.29.0"
